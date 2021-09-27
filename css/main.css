@@ -1,0 +1,23 @@
+body {
+    background-image: url("https://images.pexels.com/photos/2387818/pexels-photo-2387818.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#board {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+#spaceman {
+    width: 15vmin;
+    height: 15vmin;
+}
+
+#star {
+    width: 15vmin;
+    height: 15vmin;
+}
