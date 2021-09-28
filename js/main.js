@@ -1,11 +1,12 @@
 /*----- constants -----*/
-const word = ['HELP', 'HELLO', 'PARTS', 'Ripley'];
+const word = ['HELP', 'HELLO', 'PARTS', 'RIPLEY'];
 
 
 /*----- app's state (variables) -----*/
 let board;
 let winner;
 let wordIndex;
+let turns = 0;
 
 /*----- cached element references -----*/
 const letterEls = document.querySelectorAll('#board > button');
@@ -63,12 +64,16 @@ function randomWordIndex() {
 
 function boardChange(buttonText, wordIndex) {
     const chosenWord = word[wordIndex];
-    console.log(chosenWord);
-    console.log(wordIndex);
-    console.log(buttonText);
+    const chosenWordArray = chosenWord.split('');
     if (chosenWord.includes(buttonText)) {
-        board[wordIndex][1] = buttonText;
+        let findIndex = chosenWordArray.findIndex(f => f === buttonText);
+        board[wordIndex][findIndex] = buttonText;
+        renderWord(wordIndex);
+    } else {
+        ++turns;
     }
-    console.log(board);
 
+    console.log(chosenWord);
+    console.log(board);
+    console.log(turns);
 }
