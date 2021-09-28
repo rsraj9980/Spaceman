@@ -1,41 +1,60 @@
 /*----- constants -----*/
-const word = ['HELP', 'HELLO', 'PARTS', 'RIPLEY'];
+const words = ['HELP', 'HELLO', 'PARTS', 'RIPLEY', 'HELLO I AM HERE'];
+const MAX_WRONG_GUESSES = 6;
 
 
 /*----- app's state (variables) -----*/
-let board;
-let winner;
-let wordIndex;
-let turns = 0;
+let secretWord;
+let guessWord;
+let winOrLoss;
+let wrongLetters;
+
 
 /*----- cached element references -----*/
 const letterEls = document.querySelectorAll('#board > button');
 const msgEl = document.querySelector('h2');
-const replayEl = document.getElementById('#replay');
-const astroPic = document.getElementById('#spaceman');
+const replayEl = document.getElementById('replay');
+const astroPic = document.getElementById('spaceman');
 
 
 /*----- event listeners -----*/
 document.querySelector('#board').addEventListener('click', clickHandler);
+
+
 /*----- functions -----*/
 init();
 
 function init() {
-    board = [
-        ['_', '_', '_', '_'], // help
-        ['_', '_', '_', '_', '_'], // hello
-        ['_', '_', '_', '_', '_'], // parts
-        ['_', '_', '_', '_', '_', '_'] // Ripley
-    ];
-    winner = null;
-    render();
+    secretWord = words[Math.floor(Math.random() * words.length)];
+    winOrLoss = null;
+    wrongLetters = '';
+    guessWord = '';
+    for (let letter of secretWord) {
+        guessWord += letter === ' ' ? ' ' : '_';
+    }
+    //render();
 }
+
 
 // Handle's clicks
 function clickHandler(evt) {
-    const buttonText = evt.target.innerText;
+    const letter = evt.target.innerText;
+    if (
+        evt.target.tagName !== 'BUTTON' ||
+        winOrLoss ||
+        wrongLetters.includes(letter) ||
+        guessWord.includes(letter)
+    ) return;
+    if (secretWord.includes(letter)) {
+        // rebuild guessWord so that it includes the letter possibly in multiple positions. 
+        let newGuessWord = '';
+        for (let i = 0; i < secretWord.length; i++) {
 
-    boardChange(buttonText, wordIndex);
+        }
+        guessWord = newGuessWord;
+    } else {
+        wrongLetters += letter;
+    }
 }
 
 function render() {
@@ -51,15 +70,6 @@ function renderWord(wordInd) {
     }
     console.log(wordMsg);
     msgEl.innerHTML = wordMsg;
-}
-
-function randomWordIndex() {
-    const chosenWord = word[Math.floor(Math.random() * word.length)];
-    const chosenWordIndex = word.findIndex(w => w === chosenWord);
-
-    // console.log(chosenWord);
-    // console.log(chosenWordIndex);
-    return chosenWordIndex;
 }
 
 function boardChange(buttonText, wordIndex) {

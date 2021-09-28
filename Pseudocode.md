@@ -27,12 +27,12 @@
 
 4.3) Wait for the user to select the next word from the grid of A to Z. 
 
-5) Handle a player selection of a word:
-    5.1) Obtain the word that is being pressed.  
-    5.2) Extracting the element or character of the button pressed using event's target. 
-    5.3) If the word selected and the array has the word, immediately render it on the page
-    5.4) If the word selected and the actual word does not contains that selected word, then change it's color to red(which means its not vaid).
-    5.5) Render the next part image to keep updating the spaceship sections untill the whole spaceship is complete.
+5) Handle a player selection of a letter:
+    5.1) Obtain the letter that is being pressed.  
+        5.1.1) Extracting the element or character of the button pressed using event's target. 
+    5.2) If the letter selected and the array has the word, immediately render it on the page
+    5.3) If the letter selected and the actual word does not contains that selected word, then change it's color to red(which means its not vaid).
+    5.4) Render the next part image to keep updating the spaceship sections untill the whole spaceship is complete.
 6) winner logic
     6.1) Set the amounts of parts or turns needed to complete the spaceship(Approx~ 8)
     6.2) If the not matching array contains more words than the amount of parts of spaceship. that means the player has guessed wrong words way many times and the spaceship is complete. Computer wins. 
