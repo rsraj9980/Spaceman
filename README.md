@@ -31,4 +31,14 @@ We have used three technologies to bulid Spaceman game. The three technologies a
 
 * CSS:- It stands for Cascading Style Sheets. CSS is used to give the actually look and feel to the game. The styling, coloring, background image and all the delatails related to the look of the game is being done using CSS.
 
-* Javascript:- 
+* Javascript:- The javascript is used to give the main functionality to the HTML and CSS built structure. Javascript handles the backend logic behind the working of the game. It handles the clicks and all the state variables that gets manupulated or accessed during the gameplay.
+
+### Getting Started: 
+
+Click on the following link to start the game:- 
+
+### Next Steps: 
+The following features will be added soon:- 
+
+* Audio will be added on buttons and guessed words.
+* Vector image will be added to show the bacground for better graphics.
