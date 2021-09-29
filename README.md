@@ -1,5 +1,7 @@
 # Spaceman
 
+Inline-style: 
+![alt text](https://st2.depositphotos.com/1985863/5750/v/600/depositphotos_57501923-stock-illustration-astronaut.jpg "Logo Title Text 1")
 _Spaceman_
 
 The Spaceman game is based on the hangman game's logic. The game logic works as follows:- 
