@@ -32,6 +32,7 @@ function init() {
     for (let letter of secretWord) {
         guessWord += letter === ' ' ? ' ' : '_';
     }
+    msgEl.textContent = '';
     render();
 }
 
@@ -66,10 +67,13 @@ function clickHandler(evt) {
 
 function getWinOrLoss() {
     if (secretWord === guessWord) {
+        msgEl.textContent = 'Congratulations!! You are the Winner';
         return 'W';
     } else if (wrongLetters.length === MAX_WRONG_GUESSES) {
+        msgEl.textContent = 'See you in space! pew pew';
         return 'L';
     } else {
+        msgEl.textContent = `${6 - wrongLetters.length} tries left!`;
         return null;
     }
 }
@@ -83,8 +87,9 @@ function render() {
         } else if (wrongLetters.includes(btn.innerText)) {
             btn.style.backgroundColor = 'red';
         } else {
-            btn.style.backgroundColor = 'white';
+            btn.style.backgroundColor = '#444444';
         }
     });
     spacemanEl.style.backgroundImage = `url('imgs/spaceman-0${wrongLetters.length}.jpg')`;
+
 }
