@@ -1,5 +1,5 @@
 /*----- constants -----*/
-const words = ['HELP', 'HELLO', 'PARTS', 'RIPLEY', 'HELLO I AM HERE'];
+const words = ['SPACE', 'ASTRONAUT', 'SPACESHIP', 'SHUTTLE LAUNCH', 'WELCOME TO THE EARTH'];
 const MAX_WRONG_GUESSES = 6;
 
 /*----- app's state (variables) -----*/
