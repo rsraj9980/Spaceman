@@ -1,7 +1,8 @@
 # Spaceman
 
 _Spaceman_
-The Spaceman game is based on the handman game's logic. The game logic works as follows:- 
+
+The Spaceman game is based on the hangman game's logic. The game logic works as follows:- 
 * Computer chooses a random word from an array of words.
 * The Player gets the number of blank spaces shown on it's screen according to the length of the word.
 * Player will guess an alphabet or a letter and press the approprite button labeled as it's guessed letter. 
@@ -10,6 +11,7 @@ The Spaceman game is based on the handman game's logic. The game logic works as 
 * Else the letter will be stored in the wrongLetters state variable, which will keep track of the wrong tries and shows message of tries left each time somebody guesses a wrong letter.
 
 _Win-Logic_
+
 The Winner Logic works as follows:- 
 * If the player guesses a wrong letter, the wrongLetters count goes up as well as the spaceman image keeps building part by part.
 * If the player guesses 6 wrong letters before the word's completion, the game is over and the player gets a loosing message.
