@@ -1,6 +1,6 @@
 # Spaceman
 
-![alt text](https://i.pinimg.com/736x/93/42/46/934246926f16ded570c3ec799b3f62a3.jpg"Logo Title Text 1")
+Inline-style: ![alt text](https://i.pinimg.com/736x/93/42/46/934246926f16ded570c3ec799b3f62a3.jpg"Logo Title Text 1")
 
 _Spaceman_
 
