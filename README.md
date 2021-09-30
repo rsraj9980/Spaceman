@@ -24,7 +24,8 @@ The Winner Logic works as follows:-
 # Screenshot(s):  
 
 ### Starting look of the Spaceman game:- 
-![Starting Look of the game](screenshots/Screen Shot 2021-09-30 at 2.33.06 PM.png)
+
+![Starting Look of the game](/screenshots/Screen Shot 2021-09-30 at 2.33.06 PM.png)
 
 # Technologies Used: 
 We have used three technologies to bulid Spaceman game. The three technologies are as follows:- 
