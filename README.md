@@ -3,7 +3,7 @@
 Inline-style: 
 ![alt text](https://i.pinimg.com/736x/93/42/46/934246926f16ded570c3ec799b3f62a3.jpg "Logo Title Text 1")
 
-_Spaceman_
+# _Spaceman_
 
 The Spaceman game is based on the hangman game's logic. The game logic works as follows:- 
 * Computer chooses a random word from an array of words.
@@ -13,7 +13,7 @@ The Spaceman game is based on the hangman game's logic. The game logic works as 
 * If the letter is in the word, the letter gets displayed on the screen at the appropriate place 
 * Else the letter will be stored in the wrongLetters state variable, which will keep track of the wrong tries and shows message of tries left each time somebody guesses a wrong letter.
 
-_Win-Logic_
+### _Win-Logic_
 
 The Winner Logic works as follows:- 
 * If the player guesses a wrong letter, the wrongLetters count goes up as well as the spaceman image keeps building part by part.
@@ -21,10 +21,12 @@ The Winner Logic works as follows:-
 * If the player guesses letters correctly before the image's completion or before the 6 wrong guesses, then the player wins and get a winning message.
 
 
-### Screenshot(s):  
+# Screenshot(s):  
 
+### Starting look of the Spaceman game:- 
+![Starting Look of the game](screenshots/Screen Shot 2021-09-30 at 2.33.06 PM.png)
 
-### Technologies Used: 
+# Technologies Used: 
 We have used three technologies to bulid Spaceman game. The three technologies are as follows:- 
 
 * HTML:- It stands for hypertext markup language. HTML is used to bulid a skelaton of the Spaceman game. It gives the game all the buttons, headers, title and images. 
@@ -33,11 +35,11 @@ We have used three technologies to bulid Spaceman game. The three technologies a
 
 * Javascript:- The javascript is used to give the main functionality to the HTML and CSS built structure. Javascript handles the backend logic behind the working of the game. It handles the clicks and all the state variables that gets manupulated or accessed during the gameplay.
 
-### Getting Started: 
+# Getting Started: 
 
 Click on the following link to start the game:- 
 
-### Next Steps: 
+# Next Steps: 
 The following features will be added soon:- 
 
 * Audio will be added on buttons and guessed words.

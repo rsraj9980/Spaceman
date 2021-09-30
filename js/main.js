@@ -1,6 +1,7 @@
 /*----- constants -----*/
-const words = ['SPACE', 'ASTRONAUT', 'SPACESHIP', 'SHUTTLE LAUNCH', 'WELCOME TO THE EARTH'];
+const words = ['SPACE', 'ASTRONAUT', 'SPACESHIP', 'SHUTTLE LAUNCH', 'WELCOME TO THE EARTH', 'JET FUEL', 'NEIL ARMSTRONG', 'ASTEROID', 'MOON', 'METEOROID', 'THE MILKY WAY', 'BIG BANG THEORY', 'COSMOS', 'COMET'];
 const MAX_WRONG_GUESSES = 6;
+
 
 /*----- app's state (variables) -----*/
 let secretWord;
@@ -15,6 +16,7 @@ const msgEl = document.querySelector('h2');
 const replayEl = document.getElementById('replay');
 const spacemanEl = document.getElementById('spaceman');
 const guessEl = document.getElementById('guess');
+
 
 
 /*----- event listeners -----*/
@@ -67,13 +69,10 @@ function clickHandler(evt) {
 
 function getWinOrLoss() {
     if (secretWord === guessWord) {
-        msgEl.textContent = 'Congratulations!! You are the Winner';
         return 'W';
     } else if (wrongLetters.length === MAX_WRONG_GUESSES) {
-        msgEl.textContent = 'See you in space! pew pew';
         return 'L';
     } else {
-        msgEl.textContent = `${6 - wrongLetters.length} tries left!`;
         return null;
     }
 }
@@ -83,13 +82,26 @@ function render() {
     guessEl.textContent = guessWord;
     letterEls.forEach(function(btn) {
         if (guessWord.includes(btn.innerText)) {
-            btn.style.backgroundColor = 'green';
+            btn.style.backgroundColor = '#80ED99';
         } else if (wrongLetters.includes(btn.innerText)) {
-            btn.style.backgroundColor = 'red';
+            btn.style.backgroundColor = '#FF5C58';
         } else {
             btn.style.backgroundColor = '#444444';
         }
     });
-    spacemanEl.style.backgroundImage = `url('imgs/spaceman-0${wrongLetters.length}.jpg')`;
+    spacemanEl.style.backgroundImage = `url('imgs/spaceman-0${wrongLetters.length}.png')`;
+    renderMessage();
+}
 
+function renderMessage() {
+    if (winOrLoss === 'W') {
+        msgEl.textContent = 'Congratulations!! You are the Winner';
+        return 'W';
+    } else if (winOrLoss === 'L') {
+        msgEl.textContent = 'See you in space! pew pew';
+        return 'L';
+    } else {
+        msgEl.textContent = `${6 - wrongLetters.length} tries left!`;
+        return null;
+    }
 }
