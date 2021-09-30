@@ -1,9 +1,8 @@
 # Spaceman
 
-Inline-style: 
-![alt text](https://i.pinimg.com/736x/93/42/46/934246926f16ded570c3ec799b3f62a3.jpg "Logo Title Text 1")
+![Welcome to Space](https://i.pinimg.com/736x/93/42/46/934246926f16ded570c3ec799b3f62a3.jpg)
 
-# _Spaceman_
+### _Spaceman_
 
 The Spaceman game is based on the hangman game's logic. The game logic works as follows:- 
 * Computer chooses a random word from an array of words.
@@ -53,12 +52,12 @@ We have used three technologies to bulid Spaceman game. The three technologies a
 * Javascript:- The javascript is used to give the main functionality to the HTML and CSS built structure. Javascript handles the backend logic behind the working of the game. It handles the clicks and all the state variables that gets manupulated or accessed during the gameplay.
 
 # Getting Started: 
-
 Click on the following link to start the game:- 
+![Rajkamal's Spaceman game](https://rsraj9980.github.io/Spaceman/)
 
-
-# Next Steps: 
+# Next Steps(Icebox): 
 The following features will be added soon:- 
 
-* Audio will be added on buttons and guessed words.
+* Audio will be added on buttons or guessed words.
 * Vector image will be added to show the bacground for better graphics.
+* Giving away the word if player looses.
