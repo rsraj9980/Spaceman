@@ -98,7 +98,7 @@ function renderMessage() {
         msgEl.textContent = 'Congratulations!! You are the Winner';
         return 'W';
     } else if (winOrLoss === 'L') {
-        msgEl.textContent = 'See you in space! pew pew';
+        msgEl.textContent = 'See you in space! GAME OVER';
         return 'L';
     } else {
         msgEl.textContent = `${6 - wrongLetters.length} tries left!`;

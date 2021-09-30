@@ -27,6 +27,22 @@ The Winner Logic works as follows:-
 
 ![Starting Look of the game](screenshots/screenshot-00.png)
 
+### If player guesses the right word
+![If player guesses the right word](screenshots/screenshot-01.png)
+
+### If player guesses the wrong word
+![If player guesses the wrong word](screenshots/screenshot-02.png)
+
+### If player wins 
+![If player wins](screenshots/screenshot-03.png)
+
+### If player looses
+![If player looses](screenshots/screenshot-04.png)
+
+### Replay button
+![Replay button](screenshots/screenshot-05.png)
+
+
 # Technologies Used: 
 We have used three technologies to bulid Spaceman game. The three technologies are as follows:- 
 
@@ -39,6 +55,7 @@ We have used three technologies to bulid Spaceman game. The three technologies a
 # Getting Started: 
 
 Click on the following link to start the game:- 
+
 
 # Next Steps: 
 The following features will be added soon:- 
