@@ -53,7 +53,8 @@ We have used three technologies to bulid Spaceman game. The three technologies a
 
 # Getting Started: 
 Click on the following link to start the game:- 
-![Rajkamal's Spaceman game](https://rsraj9980.github.io/Spaceman/)
+
+[Rajkamal's Spaceman game](https://rsraj9980.github.io/Spaceman/)
 
 # Next Steps(Icebox): 
 The following features will be added soon:- 
