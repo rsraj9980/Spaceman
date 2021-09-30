@@ -25,7 +25,7 @@ The Winner Logic works as follows:-
 
 ### Starting look of the Spaceman game:- 
 
-![Starting Look of the game](/Spaceman/screenshots/screenshot-00.png)
+![Starting Look of the game](screenshots/screenshot-00.png)
 
 # Technologies Used: 
 We have used three technologies to bulid Spaceman game. The three technologies are as follows:- 
