@@ -2,7 +2,6 @@
 const words = ['SPACE', 'ASTRONAUT', 'SPACESHIP', 'SHUTTLE LAUNCH', 'WELCOME TO THE EARTH', 'JET FUEL', 'NEIL ARMSTRONG', 'ASTEROID', 'MOON', 'METEOROID', 'THE MILKY WAY', 'BIG BANG THEORY', 'COSMOS', 'COMET'];
 const MAX_WRONG_GUESSES = 6;
 
-
 /*----- app's state (variables) -----*/
 let secretWord;
 let guessWord;
@@ -16,12 +15,15 @@ const msgEl = document.querySelector('h2');
 const replayEl = document.getElementById('replay');
 const spacemanEl = document.getElementById('spaceman');
 const guessEl = document.getElementById('guess');
-
-
+const laser = new Audio('audio/laser.mp3');
+const clapping = new Audio('audio/clapping.wav');
+const lose = new Audio('audio/lose.wav');
+const wrong = new Audio('audio/wrong.mp3');
 
 /*----- event listeners -----*/
 document.querySelector('#board').addEventListener('click', clickHandler);
 replayEl.addEventListener('click', init);
+
 
 /*----- functions -----*/
 init();
@@ -34,7 +36,7 @@ function init() {
     for (let letter of secretWord) {
         guessWord += letter === ' ' ? ' ' : '_';
     }
-    msgEl.textContent = '';
+    //msgEl.textContent = '';
     render();
 }
 
@@ -64,6 +66,9 @@ function clickHandler(evt) {
         wrongLetters += letter;
     }
     winOrLoss = getWinOrLoss();
+    if (winOrLoss === 'L') {
+        guessWord = secretWord;
+    }
     render();
 }
 
@@ -83,8 +88,10 @@ function render() {
     letterEls.forEach(function(btn) {
         if (guessWord.includes(btn.innerText)) {
             btn.style.backgroundColor = '#80ED99';
+            laser.play();
         } else if (wrongLetters.includes(btn.innerText)) {
             btn.style.backgroundColor = '#FF5C58';
+            wrong.play();
         } else {
             btn.style.backgroundColor = '#444444';
         }
@@ -95,13 +102,12 @@ function render() {
 
 function renderMessage() {
     if (winOrLoss === 'W') {
+        clapping.play();
         msgEl.textContent = 'Congratulations!! You are the Winner';
-        return 'W';
     } else if (winOrLoss === 'L') {
+        lose.play();
         msgEl.textContent = 'See you in space! GAME OVER';
-        return 'L';
     } else {
         msgEl.textContent = `${6 - wrongLetters.length} tries left!`;
-        return null;
     }
 }
