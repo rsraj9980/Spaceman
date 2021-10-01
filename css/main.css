@@ -30,7 +30,6 @@ body {
     margin-right: 2vmin;
     align-items: center;
     width: 32vmin;
-    /* height: 30vmin; */
 }
 
 #spaceman {
@@ -62,12 +61,12 @@ h2 {
 #guess {
     grid-column: span 1;
     letter-spacing: 3vmin;
-    font-size: 5vmin;
+    line-height: 12vmin;
+    font-size: 6vmin;
 }
 
 h1 {
     font-family: 'Press Start 2P', cursive;
-    margin: 0px;
     font-size: 8vmin;
     grid-column: span 3;
     text-align: center;

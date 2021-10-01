@@ -1,23 +1,23 @@
 # Spaceman
 
-![Welcome to Space](https://i.pinimg.com/736x/93/42/46/934246926f16ded570c3ec799b3f62a3.jpg)
+![Welcome to Space](https://i1.wp.com/boingboing.net/wp-content/uploads/2015/05/lifeline.jpg?fit=945%2C532&ssl=1&w=640)
 
 ### _Spaceman_
 
 The Spaceman game is based on the hangman game's logic. The game logic works as follows:- 
 * Computer chooses a random word from an array of words.
 * The Player gets the number of blank spaces shown on it's screen according to the length of the word.
-* Player will guess an alphabet or a letter and press the approprite button labeled as it's guessed letter. 
+* Player will guess an alphabet or a letter and press the approprite button labeled as it's guessed letter (which makes a laser sound if the letter is correct). 
 * Computer checks if the secretWord that was radomly choosen before has that letter or alphabet or not.
 * If the letter is in the word, the letter gets displayed on the screen at the appropriate place 
-* Else the letter will be stored in the wrongLetters state variable, which will keep track of the wrong tries and shows message of tries left each time somebody guesses a wrong letter.
+* Else the letter will be stored in the wrongLetters state variable, which will keep track of the wrong tries and shows message of tries left each time somebody guesses a wrong letter (which makes a deadning wrong sound if the letter is incorrect).
 
 ### _Win-Logic_
 
 The Winner Logic works as follows:- 
 * If the player guesses a wrong letter, the wrongLetters count goes up as well as the spaceman image keeps building part by part.
-* If the player guesses 6 wrong letters before the word's completion, the game is over and the player gets a loosing message.
-* If the player guesses letters correctly before the image's completion or before the 6 wrong guesses, then the player wins and get a winning message.
+* If the player guesses 6 wrong letters before the word's completion, the game is over and the player gets a loosing message and a game over sound.
+* If the player guesses letters correctly before the image's completion or before the 6 wrong guesses, then the player wins and get a winning message and a clapping sound.
 
 
 # Screenshot(s):  
@@ -57,8 +57,9 @@ Click on the following link to start the game:-
 [Rajkamal's Spaceman game](https://rsraj9980.github.io/Spaceman/)
 
 # Next Steps(Icebox): 
-The following features will be added soon:- 
+The following features are be added as Icebox:- 
 
-* Audio will be added on buttons or guessed words.
-* Vector image will be added to show the bacground for better graphics.
-* Giving away the word if player looses.
+* Audio is added on buttons or guessed words.
+* Vector image is added to show the bacground for better graphics.
+* Gives away the word if player looses.
+* Addition of a small favicon. 
